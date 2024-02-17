@@ -1,3 +1,5 @@
+import { Layout } from 'components';
+
 export const App = () => {
-  return <div>Divine Mind</div>;
+  return <Layout>Divine Mind !!</Layout>;
 };
