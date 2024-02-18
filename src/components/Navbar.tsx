@@ -25,7 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <nav
       className={twMerge(
-        'container mx-auto rounded-xl p-4 bg-customWhite flex justify-between items-center pr-10',
+        'container mx-auto rounded-xl p-4 bg-customWhite flex justify-between items-center px-10',
         containerStyles
       )}
     >
