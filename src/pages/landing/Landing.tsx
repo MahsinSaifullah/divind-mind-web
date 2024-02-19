@@ -1,5 +1,6 @@
 import { HeroImage } from 'assets';
 import { Layout } from 'components';
+import { Details } from './Details';
 
 export const Landing = () => {
   return (
@@ -8,7 +9,7 @@ export const Landing = () => {
         <div className='flex justify-center'>
           <HeroImage className='w-[750px] h-[750px]' />
         </div>
-        <div>hello</div>
+        <Details />
       </div>
     </Layout>
   );
