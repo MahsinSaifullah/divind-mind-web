@@ -1,5 +1,5 @@
-import { Layout } from 'components';
+import { Landing } from 'pages';
 
 export const App = () => {
-  return <Layout>Divine Mind !!</Layout>;
+  return <Landing />;
 };
