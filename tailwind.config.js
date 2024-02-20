@@ -6,6 +6,7 @@ export default {
   theme: {
     colors: {
       customWhite: '#FFFEFC',
+      lightGrey: '#F3F3F1',
       darkPurple: '#8F70C6',
       lightPurple: '#D99BFF',
       brightPink: '#F597C1',
