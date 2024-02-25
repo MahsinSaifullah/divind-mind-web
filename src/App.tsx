@@ -1,5 +1,5 @@
-import { Landing } from 'pages';
+import { Auth } from 'pages';
 
 export const App = () => {
-  return <Landing />;
+  return <Auth />;
 };
