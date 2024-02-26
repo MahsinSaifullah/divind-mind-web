@@ -12,6 +12,7 @@ interface NavbarProps {
   backButtonStyles?: string;
   navLinks?: INavLink[];
   showBackButton?: boolean;
+  hideLogo?: boolean;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -21,6 +22,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   backButtonStyles,
   navLinks,
   showBackButton = false,
+  hideLogo = false,
 }) => {
   return (
     <nav
@@ -29,7 +31,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         containerStyles
       )}
     >
-      <Logo />
+      {!hideLogo && <Logo />}
       {!!navLinks?.length && !showBackButton && (
         <ul className="flex gap-16 items-center tracking-wide">
           {navLinks.map((link) => {

@@ -6,7 +6,7 @@ const AUTH_TYPE = 'login';
 export const Auth = () => {
   const authType: string = AUTH_TYPE;
   return (
-    <Layout>
+    <Layout showBackButton>
       <div className="container mx-auto flex-1 flex justify-center items-center flex-col gap-10">
         <Heading
           text={authType === 'register' ? 'Welcome!' : 'Welcome Back!'}
