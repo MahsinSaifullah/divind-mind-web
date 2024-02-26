@@ -1,12 +1,22 @@
-import { Heading, Layout } from 'components';
+import { ArrowLeftIcon } from '@heroicons/react/16/solid';
+
+import { Heading, LandingLayout } from 'components';
 import { Form } from './Form';
 
 const AUTH_TYPE = 'login';
 
+const BackButton = () => (
+  <ArrowLeftIcon
+    className="h-6 w-6 text-lightPurple cursor-pointer"
+    onClick={() => console.log('hello from back button')}
+  />
+);
+
 export const Auth = () => {
   const authType: string = AUTH_TYPE;
+
   return (
-    <Layout showBackButton>
+    <LandingLayout navIcons={[BackButton()]}>
       <div className="container mx-auto flex-1 flex justify-center items-center flex-col gap-10">
         <Heading
           text={authType === 'register' ? 'Welcome!' : 'Welcome Back!'}
@@ -22,6 +32,6 @@ export const Auth = () => {
           </span>
         </h3>
       </div>
-    </Layout>
+    </LandingLayout>
   );
 };

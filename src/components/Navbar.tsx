@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
-import { ArrowLeftIcon } from '@heroicons/react/24/solid';
 
 import { Logo } from './Logo';
 import { INavLink } from 'types';
@@ -9,20 +8,20 @@ interface NavbarProps {
   containerStyles?: string;
   navLinkStyles?: string;
   navButtonStyles?: string;
-  backButtonStyles?: string;
+  logoStyles?: string;
   navLinks?: INavLink[];
-  showBackButton?: boolean;
   hideLogo?: boolean;
+  icons?: JSX.Element[];
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   containerStyles,
   navLinkStyles,
   navButtonStyles,
-  backButtonStyles,
+  logoStyles,
   navLinks,
-  showBackButton = false,
   hideLogo = false,
+  icons = [],
 }) => {
   return (
     <nav
@@ -31,10 +30,10 @@ export const Navbar: React.FC<NavbarProps> = ({
         containerStyles
       )}
     >
-      {!hideLogo && <Logo />}
-      {!!navLinks?.length && !showBackButton && (
-        <ul className="flex gap-16 items-center tracking-wide">
-          {navLinks.map((link) => {
+      {!hideLogo && <Logo className={logoStyles} />}
+      <ul className="flex gap-16 items-center tracking-wide">
+        {!!navLinks?.length &&
+          navLinks.map((link) => {
             return (
               <li
                 key={link.url}
@@ -50,16 +49,14 @@ export const Navbar: React.FC<NavbarProps> = ({
               </li>
             );
           })}
-        </ul>
-      )}
-      {showBackButton && (
-        <ArrowLeftIcon
-          className={twMerge(
-            'h-6 w-6 text-lightPurple cursor-pointer',
-            backButtonStyles
-          )}
-        />
-      )}
+        {!!icons.length && (
+          <div className="flex gap-10">
+            {icons.map((icon, index) => {
+              return React.cloneElement(icon, { key: index });
+            })}
+          </div>
+        )}
+      </ul>
     </nav>
   );
 };

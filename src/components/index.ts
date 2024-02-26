@@ -1,4 +1,4 @@
-export * from './Layout';
+export * from './LandingLayout';
 export * from './Logo';
 export * from './Navbar';
 export * from './Footer';
