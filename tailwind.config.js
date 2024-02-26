@@ -12,6 +12,7 @@ export default {
       softPurple: '#CCB3F8',
       brightPink: '#F597C1',
       darkPink: '#DC87AD',
+      bluishWhite: '#F1F3FF',
     },
     extend: {
       fontFamily: {
