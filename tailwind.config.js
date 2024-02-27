@@ -13,6 +13,7 @@ export default {
       brightPink: '#F597C1',
       darkPink: '#DC87AD',
       bluishWhite: '#F1F3FF',
+      darkGray: '#909090',
     },
     extend: {
       fontFamily: {
