@@ -44,13 +44,8 @@ export const Game: React.FC<GameProps> = ({ game, index }) => {
       </div>
       <div className="mt-5 flex flex-col gap-2">
         <Button
-          className="bg-brightPink text-customWhite hover:bg-darkPink min-w-[100px]"
-          label="Start game"
-          onClick={() => {}}
-        />
-        <Button
-          className="bg-softPurple text-customWhite hover:bg-darkPurple min-w-[100px]"
-          label="Edit game"
+          className="bg-darkPurple text-customWhite hover:bg-softPurple min-w-[100px]"
+          label="Enter game"
           onClick={() => {}}
         />
       </div>
