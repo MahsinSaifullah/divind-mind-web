@@ -1,6 +1,8 @@
 import { UserIcon } from '@heroicons/react/16/solid';
 
 import { Button, HomeLayout, SearchBar } from 'components';
+import { NoGame } from './NoGame';
+import { IGame } from 'types';
 
 const UserProfileButton = () => (
   <UserIcon
@@ -10,9 +12,10 @@ const UserProfileButton = () => (
 );
 
 export const Home = () => {
+  const games: IGame[] = [];
   return (
     <HomeLayout navIcons={[UserProfileButton()]}>
-      <div className="container mx-auto flex justify-center mt-10">
+      <div className="container mx-auto flex justify-center mt-10 flex-col">
         <div className="w-full flex justify-between">
           <SearchBar />
           <Button
@@ -21,6 +24,7 @@ export const Home = () => {
             onClick={() => {}}
           />
         </div>
+        {games.length <= 0 && <NoGame />}
       </div>
     </HomeLayout>
   );

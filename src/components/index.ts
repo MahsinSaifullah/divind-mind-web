@@ -7,3 +7,4 @@ export * from './SubHeading';
 export * from './Button';
 export * from './HomeLayout';
 export * from './SearchBar';
+export * from './H3';
