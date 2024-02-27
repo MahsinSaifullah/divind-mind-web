@@ -3,6 +3,8 @@ import { UserIcon } from '@heroicons/react/16/solid';
 import { Button, HomeLayout, SearchBar } from 'components';
 import { NoGame } from './NoGame';
 import { IGame } from 'types';
+import { GAMES } from 'data';
+import { GamesList } from './GamesList';
 
 const UserProfileButton = () => (
   <UserIcon
@@ -12,7 +14,7 @@ const UserProfileButton = () => (
 );
 
 export const Home = () => {
-  const games: IGame[] = [];
+  const games: IGame[] = GAMES;
   return (
     <HomeLayout navIcons={[UserProfileButton()]}>
       <div className="container mx-auto flex justify-center mt-10 flex-col">
@@ -25,6 +27,7 @@ export const Home = () => {
           />
         </div>
         {games.length <= 0 && <NoGame />}
+        {games.length > 0 && <GamesList games={games} />}
       </div>
     </HomeLayout>
   );

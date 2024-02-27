@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const defaultColors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -14,6 +15,7 @@ export default {
       darkPink: '#DC87AD',
       bluishWhite: '#F1F3FF',
       darkGray: '#909090',
+      ...defaultColors,
     },
     extend: {
       fontFamily: {
