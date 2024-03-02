@@ -1,5 +1,5 @@
-import { Home } from 'pages';
+import { CreateGame } from 'pages';
 
 export const App = () => {
-  return <Home />;
+  return <CreateGame />;
 };

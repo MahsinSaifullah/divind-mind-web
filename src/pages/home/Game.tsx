@@ -28,7 +28,7 @@ export const Game: React.FC<GameProps> = ({ game, index }) => {
           <P text={game.code} className="text-ellipsis text-darkGray" />
         </div>
         <div className="flex items-center gap-2 justify-center">
-          <H3 text="Players Limit:" className="text-md text-brightPink" />
+          <H3 text="Max Players:" className="text-md text-brightPink" />
           <P
             text={`${game.maxPlayerLimit}`}
             className="text-ellipsis text-darkGray"
