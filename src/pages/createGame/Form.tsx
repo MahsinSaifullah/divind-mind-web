@@ -1,16 +1,8 @@
-import { twMerge } from 'tailwind-merge';
-
 import { Button, Input } from 'components';
 
 export const Form = () => {
   return (
     <form className="w-full flex justify-center items-center flex-col mt-16 gap-4">
-      <Input
-        type="text"
-        name="name"
-        placeholder="name"
-        className="w-1/2 md:w-1/4"
-      />
       <Input
         type="text"
         name="code"

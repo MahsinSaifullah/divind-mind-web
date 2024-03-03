@@ -13,3 +13,4 @@ export * from './P';
 export * from './H2';
 export * from './BackNavButton';
 export * from './Input';
+export * from './Label';

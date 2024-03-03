@@ -19,7 +19,7 @@ export const Input: React.FC<InputProps> = ({
       type={type}
       name={name}
       className={twMerge(
-        'w-full shadow p-3 rounded-xl font-rubik text-brightPink focus:outline-none focus:border-brightPink focus:border-2 placeholder-brightPink placeholder-opacity-75',
+        'w-full shadow p-3 rounded-xl font-rubik text-brightPink focus:outline-none focus:border-brightPink focus:border-2 placeholder-brightPink placeholder-opacity-60',
         className
       )}
       placeholder={placeholder}

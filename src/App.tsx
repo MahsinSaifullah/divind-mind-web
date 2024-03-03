@@ -1,5 +1,5 @@
-import { CreateGame } from 'pages';
+import { AddQuiz } from 'pages';
 
 export const App = () => {
-  return <CreateGame />;
+  return <AddQuiz />;
 };
