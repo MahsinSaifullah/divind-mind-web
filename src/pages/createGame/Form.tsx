@@ -1,25 +1,27 @@
 import { twMerge } from 'tailwind-merge';
 
-import { Button } from 'components';
+import { Button, Input } from 'components';
 
 export const Form = () => {
   return (
     <form className="w-full flex justify-center items-center flex-col mt-16 gap-4">
-      <input
+      <Input
+        type="text"
+        name="name"
+        placeholder="name"
+        className="w-1/2 md:w-1/4"
+      />
+      <Input
         type="text"
         name="code"
-        className={twMerge(
-          'w-1/2 md:w-1/4 h-12 shadow p-4 rounded-xl font-rubik text-brightPink focus:outline-none focus:border-brightPink focus:border-2 placeholder-brightPink placeholder-opacity-75'
-        )}
         placeholder="unique code"
+        className="w-1/2 md:w-1/4"
       />
-      <input
+      <Input
         type="number"
-        name="code"
-        className={twMerge(
-          'w-1/2 md:w-1/4 h-12 shadow p-4 rounded-xl font-rubik text-brightPink focus:outline-none focus:border-brightPink focus:border-2 placeholder-brightPink placeholder-opacity-75'
-        )}
+        name="maxPlayerLimit"
         placeholder="max player limit"
+        className="w-1/2 md:w-1/4"
       />
       <Button
         className="bg-darkPurple text-customWhite hover:bg-softPurple min-w-0 w-1/2 md:w-1/4 mt-5"

@@ -12,3 +12,4 @@ export * from './Card';
 export * from './P';
 export * from './H2';
 export * from './BackNavButton';
+export * from './Input';
